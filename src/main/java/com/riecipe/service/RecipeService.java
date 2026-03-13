@@ -1,5 +1,8 @@
 package com.riecipe.service;
+import com.riecipe.model.Recipe;
+import com.riecipe.repository.RecipeRepository;
 import jakarta.annotation.PostConstruct;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
