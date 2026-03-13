@@ -10,4 +10,4 @@ FROM eclipse-temurin:21-jre-jammy
 WORKDIR /app
 COPY --from=build /app/target/recipe-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 8082
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-Dspring.data.mongodb.uri=${SPRING_DATA_MONGODB_URI}", "-Dserver.port=${PORT}", "-jar", "app.jar"]
