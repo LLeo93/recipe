@@ -32,13 +32,13 @@ public class RecipeService {
     @Autowired
     private org.springframework.data.mongodb.core.MongoTemplate mongoTemplate;
 
-    @PostConstruct
-    public void checkConnection() {
-        System.out.println("--------------------------------");
-        System.out.println("ENV URI: " + System.getenv("SPRING_DATA_MONGODB_URI"));
-        System.out.println("CONNESSO AL DATABASE: " + mongoTemplate.getDb().getName());
-        System.out.println("COLLEZIONI PRESENTI: " + mongoTemplate.getCollectionNames());
-        System.out.println("--------------------------------");
-    }
+//    @PostConstruct
+//    public void checkConnection() {
+//        System.out.println("--------------------------------");
+//        System.out.println("ENV URI: " + System.getenv("SPRING_DATA_MONGODB_URI"));
+//        System.out.println("CONNESSO AL DATABASE: " + mongoTemplate.getDb().getName());
+//        System.out.println("COLLEZIONI PRESENTI: " + mongoTemplate.getCollectionNames());
+//        System.out.println("--------------------------------");
+//    }
 
 }
