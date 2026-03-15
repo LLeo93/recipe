@@ -14,6 +14,6 @@ WORKDIR /app
 
 COPY --from=build /app/target/recipe-0.0.1-SNAPSHOT.jar app.jar
 
-EXPOSE 8080
+EXPOSE 10000
 
-ENTRYPOINT ["java","-jar","app.jar"]
+ENTRYPOINT ["java", "-Dserver.port=10000", "-jar", "app.jar"]
